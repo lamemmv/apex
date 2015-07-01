@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Data", "Modules\Billing\Apex.Modules.Billing.Data\Apex.Modules.Billing.Data.csproj", "{51F976C3-B94F-45E8-B296-F56369897CB8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{5A5DE353-9E8A-451D-8372-E2D1A58ACBA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{6B92E964-07E3-4481-9CC4-E3C077F1ADFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Billing", "Billing", "{24E2DC14-E7EE-467A-9652-022F095F4160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +42,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24E2DC14-E7EE-467A-9652-022F095F4160} = {5A5DE353-9E8A-451D-8372-E2D1A58ACBA1}
+		{4EAC28C5-0A56-44C4-830D-2949C60ECC41} = {6B92E964-07E3-4481-9CC4-E3C077F1ADFE}
+		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6} = {24E2DC14-E7EE-467A-9652-022F095F4160}
+		{51F976C3-B94F-45E8-B296-F56369897CB8} = {24E2DC14-E7EE-467A-9652-022F095F4160}
+		{DBCFB6BC-115B-4D86-910D-D96ECDD23407} = {24E2DC14-E7EE-467A-9652-022F095F4160}
 	EndGlobalSection
 EndGlobal
