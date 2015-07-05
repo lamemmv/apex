@@ -1,20 +1,19 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="RouteConfig.cs" company="">
+// <copyright file="DefaultRoute.cs" company="">
 //   Copyright © 2015 
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Modules.Billing.Web
+namespace App.Apex.Web.Routing
 {
     using System.Web.Routing;
 
-    using Routing;
-
-    public class RouteConfig
+    public class DefaultRoute : Route
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        public DefaultRoute()
+            : base("{*path}", new DefaultRouteHandler())
         {
-            routes.Add("Default", new DefaultRoute());
+            this.RouteExistingFiles = false;
         }
     }
 }

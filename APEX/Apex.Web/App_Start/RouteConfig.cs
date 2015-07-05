@@ -4,11 +4,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Modules.Billing.Web
+namespace App.Apex.Web
 {
     using System.Web.Routing;
 
-    using Routing;
+    using App.Apex.Web.Routing;
 
     public class RouteConfig
     {

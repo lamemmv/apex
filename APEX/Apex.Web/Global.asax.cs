@@ -1,20 +1,21 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="RouteConfig.cs" company="">
+// <copyright file="Global.asax.cs" company="">
 //   Copyright © 2015 
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Modules.Billing.Web
+namespace App.Apex.Web
 {
+    using System.Web;
+    using System.Web.Optimization;
     using System.Web.Routing;
 
-    using Routing;
-
-    public class RouteConfig
+    public class Application : HttpApplication
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        protected void Application_Start()
         {
-            routes.Add("Default", new DefaultRoute());
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
