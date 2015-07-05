@@ -17,8 +17,8 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 controller: 'HomeCtrl'
 
             })
-            .state('about', {
-                url: '/about',
+            .state('news', {
+                url: '/news',
                 templateUrl: '/views/about',
                 controller: 'AboutCtrl'
             })

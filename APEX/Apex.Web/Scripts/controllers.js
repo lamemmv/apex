@@ -14,11 +14,21 @@ angular.module('app.controllers', [])
     }])
 
     // Path: /about
-    .controller('AboutCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+    .controller('AboutCtrl', ['$scope', '$location', '$window', '$http', function ($scope, $location, $window, $http) {
         $scope.$root.title = 'AngularJS SPA | About';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
+
+        initialize();
+
+        function initialize() {
+            $http.get("/api/news", { params: { 'Id': 1 } }).success(function (data, status, headers, config) {
+                console.log('successful');
+            }).error(function (data, status, headers, config) {
+                console.log('error');
+            });
+        }
     }])
 
     // Path: /login
