@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Web", "Modules\Billing\Apex.Modules.Billing.Web\Apex.Modules.Billing.Web.csproj", "{DBCFB6BC-115B-4D86-910D-D96ECDD23407}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Framework.Core", "Framework\Apex.Framework.Core\Apex.Framework.Core.csproj", "{4EAC28C5-0A56-44C4-830D-2949C60ECC41}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Business", "Modules\Billing\Apex.Modules.Billing.Business\Apex.Modules.Billing.Business.csproj", "{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Data", "Modules\Billing\Apex.Modules.Billing.Data\Apex.Modules.Billing.Data.csproj", "{51F976C3-B94F-45E8-B296-F56369897CB8}"
 EndProject
@@ -37,24 +33,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.News.Data", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Web", "Apex.Web\Apex.Web.csproj", "{22150F74-44D7-4C2F-9A3E-1A403080C291}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Modules.Billing.Services", "Modules\Billing\Apex.Modules.Billing.Services\Apex.Modules.Billing.Services.csproj", "{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apex.Framework.Utilities", "Framework\Apex.Framework.Utilities\Apex.Framework.Utilities.csproj", "{4F08A613-9D6A-4035-BFE0-90F6E531B4AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DBCFB6BC-115B-4D86-910D-D96ECDD23407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBCFB6BC-115B-4D86-910D-D96ECDD23407}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBCFB6BC-115B-4D86-910D-D96ECDD23407}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBCFB6BC-115B-4D86-910D-D96ECDD23407}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EAC28C5-0A56-44C4-830D-2949C60ECC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4EAC28C5-0A56-44C4-830D-2949C60ECC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EAC28C5-0A56-44C4-830D-2949C60ECC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EAC28C5-0A56-44C4-830D-2949C60ECC41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51F976C3-B94F-45E8-B296-F56369897CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51F976C3-B94F-45E8-B296-F56369897CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51F976C3-B94F-45E8-B296-F56369897CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,6 +79,14 @@ Global
 		{22150F74-44D7-4C2F-9A3E-1A403080C291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22150F74-44D7-4C2F-9A3E-1A403080C291}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22150F74-44D7-4C2F-9A3E-1A403080C291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F08A613-9D6A-4035-BFE0-90F6E531B4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F08A613-9D6A-4035-BFE0-90F6E531B4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F08A613-9D6A-4035-BFE0-90F6E531B4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F08A613-9D6A-4035-BFE0-90F6E531B4AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,9 +97,9 @@ Global
 		{D5C8E15D-B9B0-4FC7-9581-3E657BDBDF81} = {5A5DE353-9E8A-451D-8372-E2D1A58ACBA1}
 		{812D9BA7-B916-40E7-B22D-269033ABA2F7} = {5A5DE353-9E8A-451D-8372-E2D1A58ACBA1}
 		{4EAC28C5-0A56-44C4-830D-2949C60ECC41} = {6B92E964-07E3-4481-9CC4-E3C077F1ADFE}
+		{4F08A613-9D6A-4035-BFE0-90F6E531B4AB} = {6B92E964-07E3-4481-9CC4-E3C077F1ADFE}
 		{51F976C3-B94F-45E8-B296-F56369897CB8} = {24E2DC14-E7EE-467A-9652-022F095F4160}
-		{DBCFB6BC-115B-4D86-910D-D96ECDD23407} = {24E2DC14-E7EE-467A-9652-022F095F4160}
-		{1CE73FF0-C5AA-4C2B-BFCF-09428855F1C6} = {24E2DC14-E7EE-467A-9652-022F095F4160}
+		{CF23FD18-C579-4EC3-B721-DDDE3CB01E1A} = {24E2DC14-E7EE-467A-9652-022F095F4160}
 		{CFE18DAF-C275-4F54-8666-4ADF50D026F1} = {8103DBA9-21FC-474D-9DB3-A71151E7D01B}
 		{84009D72-5A60-4630-B9DC-85839828B3CA} = {8103DBA9-21FC-474D-9DB3-A71151E7D01B}
 		{EDCFFAFC-BCCE-4291-8D60-E7A69B897916} = {D5C8E15D-B9B0-4FC7-9581-3E657BDBDF81}
