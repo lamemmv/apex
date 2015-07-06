@@ -19,12 +19,15 @@ namespace App.Apex.Web
             bundles.Add(new ScriptBundle("~/js/jquery").Include("~/scripts/vendor/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/js/app").Include(
+                //"~/scripts/vendor/angular.js",
                 "~/scripts/vendor/angular-ui-router.js",
-                "~/scripts/filters.js",
-                "~/scripts/services.js",
-                "~/scripts/directives.js",
-                "~/scripts/controllers.js",
-                "~/scripts/app.js"));
+                "~/scripts/vendor/angular-translate.js",
+                "~/Backend/translate.js",
+                "~/Backend/shared/filters.js",
+                "~/Backend/shared/services.js",
+                "~/Backend/shared/directives.js",
+                "~/Backend/components/news/controllers.js",
+                "~/Backend/app.js"));
         }
     }
 }

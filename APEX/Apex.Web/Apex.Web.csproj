@@ -138,6 +138,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backend\translate.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
@@ -147,23 +148,27 @@
     <Content Include="Content\app.less" />
     <Content Include="Content\variables.less" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\controllers.js" />
-    <Content Include="Scripts\controllers.spec.js">
+    <Content Include="Backend\components\news\controllers.js" />
+    <Content Include="Backend\components\news\controllers.spec.js">
       <DependentUpon>controllers.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\directives.js" />
-    <Content Include="Scripts\directives.spec.js">
+    <Content Include="Backend\shared\directives.js" />
+    <Content Include="Backend\shared\directives.spec.js">
       <DependentUpon>directives.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\filters.js" />
-    <Content Include="Scripts\filters.spec.js">
+    <Content Include="Backend\shared\filters.js" />
+    <Content Include="Backend\shared\filters.spec.js">
       <DependentUpon>filters.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\services.js" />
-    <Content Include="Scripts\services.spec.js">
+    <Content Include="Backend\shared\services.js" />
+    <Content Include="Backend\shared\services.spec.js">
       <DependentUpon>services.js</DependentUpon>
     </Content>
+    <Content Include="Images\apex-logo.jpg" />
+    <Content Include="Images\apex-logo.png" />
     <Content Include="Scripts\vendor\angular-csp.css" />
+    <Content Include="Scripts\vendor\angular-translate.js" />
+    <Content Include="Scripts\vendor\angular-translate.min.js" />
     <Content Include="Scripts\vendor\angular-ui-router.js" />
     <Content Include="Scripts\vendor\angular-ui-router.min.js" />
     <Content Include="Scripts\vendor\i18n\angular-locale_af-na.js" />
@@ -489,7 +494,7 @@
     <Content Include="Scripts\vendor\jquery-2.0.3.min.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.min.map" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Scripts\app.js" />
+    <Content Include="Backend\app.js" />
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="crossdomain.xml" />
@@ -531,7 +536,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Folder Include="Backend\components\apartment\" />
+    <Folder Include="Backend\components\billing\" />
+    <Folder Include="Backend\components\hotel\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

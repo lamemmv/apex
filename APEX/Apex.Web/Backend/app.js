@@ -1,11 +1,11 @@
 ﻿'use strict';
 
 // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
+var apexApp = angular.module('apex-app', ['ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'pascalprecht.translate']);
 
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
     // injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
+apexApp.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
 
         // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
         // ------------------------------------------------------------------------------------------------------------
@@ -15,7 +15,6 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 url: '/',
                 templateUrl: '/views/index',
                 controller: 'HomeCtrl'
-
             })
             .state('news', {
                 url: '/news',
@@ -35,7 +34,6 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
             });
 
         $locationProvider.html5Mode(true);
-
     }])
 
     // Gets executed after the injector is created and are used to kickstart the application. Only instances and constants

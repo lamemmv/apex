@@ -14,12 +14,13 @@ angular.module('app.controllers', [])
     }])
 
     // Path: /about
-    .controller('AboutCtrl', ['$scope', '$location', '$window', '$http', function ($scope, $location, $window, $http) {
+    .controller('AboutCtrl', ['$scope', '$location', '$window', '$http', '$translate', function ($scope, $location, $window, $http, $translate) {
         $scope.$root.title = 'AngularJS SPA | About';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
 
+        console.log($translate.instant('TEST_MESSAGE'));
         initialize();
 
         function initialize() {
