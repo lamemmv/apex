@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using App.Apex.Web.Models;
+using Apex.Web.Models;
 
-namespace App.Apex.Web.Controllers
+namespace Apex.Web.Controllers
 {
     public class NewsController : ApiController
     {

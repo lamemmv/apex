@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using Newtonsoft.Json.Serialization;
 
-namespace App.Apex.Web.App_Start
+namespace Apex.Web.App_Start
 {
     public class WebApiConfig
     {

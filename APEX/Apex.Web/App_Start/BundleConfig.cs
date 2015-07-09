@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
     using System.Web;
     using System.Web.Optimization;

@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Web.Routing
+namespace Apex.Web.Routing
 {
     using System;
     using System.Web;

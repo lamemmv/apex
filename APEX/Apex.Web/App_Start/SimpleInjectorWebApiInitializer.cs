@@ -1,8 +1,9 @@
-namespace App.Apex.Web
+namespace Apex.Web
 {
 	using System.Web.Http;
 	using SimpleInjector;
 	using SimpleInjector.Integration.WebApi;
+    using Apex.Framework.Data.Context;
 
 	public static class SimpleInjectorWebApiInitializer
 	{
@@ -22,7 +23,7 @@ namespace App.Apex.Web
 
 		private static void InitializeContainer(Container container)
 		{
-			//container.RegisterWebApiRequest<IUnitOfWork, UnitOfWork>();
+			container.RegisterWebApiRequest<IUnitOfWork, UnitOfWork>();
 		}
 	}
 }

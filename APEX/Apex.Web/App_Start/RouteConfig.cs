@@ -4,11 +4,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
     using System.Web.Routing;
 
-    using App.Apex.Web.Routing;
+    using Apex.Web.Routing;
 
     public class RouteConfig
     {

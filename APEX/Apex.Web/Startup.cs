@@ -4,9 +4,9 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-[assembly: Microsoft.Owin.OwinStartup(typeof(App.Apex.Web.Startup))]
+[assembly: Microsoft.Owin.OwinStartup(typeof(Apex.Web.Startup))]
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
     using Owin;
 

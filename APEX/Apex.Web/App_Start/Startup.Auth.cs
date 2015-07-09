@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
     using Microsoft.AspNet.Identity;
     using Microsoft.Owin;

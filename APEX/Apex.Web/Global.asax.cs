@@ -5,9 +5,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Web.Http;
-using App.Apex.Web.App_Start;
+using Apex.Web.App_Start;
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
     using System.Web;
     using System.Web.Optimization;
