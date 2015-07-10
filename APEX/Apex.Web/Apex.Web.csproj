@@ -123,7 +123,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
@@ -156,8 +159,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backend\components\home\homeController.js" />
+    <Content Include="Backend\components\home\index.html" />
     <Content Include="Backend\components\news\index.html" />
-    <Content Include="Backend\translate.js" />
+    <Content Include="Backend\components\users\index.html" />
+    <Content Include="Backend\components\users\usersController.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
@@ -167,9 +173,9 @@
     <Content Include="Content\app.less" />
     <Content Include="Content\variables.less" />
     <Content Include="Global.asax" />
-    <Content Include="Backend\components\news\controllers.js" />
+    <Content Include="Backend\components\news\newsController.js" />
     <Content Include="Backend\components\news\controllers.spec.js">
-      <DependentUpon>controllers.js</DependentUpon>
+      <DependentUpon>newsController.js</DependentUpon>
     </Content>
     <Content Include="Backend\shared\directives.js" />
     <Content Include="Backend\shared\directives.spec.js">
@@ -185,6 +191,8 @@
     </Content>
     <Content Include="Images\apex-logo.jpg" />
     <Content Include="Images\apex-logo.png" />
+    <Content Include="Scripts\translations\resources_en-us.js" />
+    <Content Include="Scripts\translations\resources_vi-vn.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />
     <Content Include="Scripts\vendor\angular-translate.js" />
     <Content Include="Scripts\vendor\angular-translate.min.js" />
@@ -509,6 +517,7 @@
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Backend\app.routes.js" />
+    <Content Include="Backend\constants\apex.constants.js" />
     <None Include="Scripts\vendor\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.js" />
     <Content Include="Scripts\vendor\jquery-2.0.3.min.js" />
@@ -558,9 +567,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Backend\components\apartment\" />
-    <Folder Include="Backend\components\billing\" />
-    <Folder Include="Backend\components\hotel\" />
+    <Folder Include="Backend\components\errors\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

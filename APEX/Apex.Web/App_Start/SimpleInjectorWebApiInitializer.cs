@@ -1,11 +1,11 @@
+using System.Web.Http;
+using Apex.Framework.Data.Context;
+using SimpleInjector;
+using SimpleInjector.Integration.WebApi;
+
 namespace Apex.Web
 {
-	using System.Web.Http;
-	using SimpleInjector;
-	using SimpleInjector.Integration.WebApi;
-    using Apex.Framework.Data.Context;
-
-	public static class SimpleInjectorWebApiInitializer
+    public static class SimpleInjectorWebApiInitializer
 	{
 		/// <summary>Initialize the container and register it as MVC3 Dependency Resolver.</summary>
 		public static void Initialize()

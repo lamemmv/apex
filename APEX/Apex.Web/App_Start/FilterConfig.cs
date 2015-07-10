@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace App.Apex.Web
+namespace Apex.Web
 {
 	public class FilterConfig
 	{

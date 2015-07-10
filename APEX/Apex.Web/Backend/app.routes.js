@@ -13,24 +13,28 @@
 		$stateProvider
             .state('home', {
             	url: '/',
-            	templateUrl: '/views/index',
-            	controller: 'HomeCtrl'
+            	templateUrl: '/Backend/components/home/index.html',
+            	controller: controllers.home,
+                controllerAs: 'vm'
             })
             .state('news', {
             	url: '/news',
-            	templateUrl: '/backend/components/news/index.html',
-            	controller: 'NewsController'
+            	templateUrl: '/Backend/components/news/index.html',
+            	controller: controllers.newsController,
+            	controllerAs: 'vm'
             })
             .state('login', {
             	url: '/login',
             	layout: 'basic',
             	templateUrl: '/views/login',
-            	controller: 'LoginCtrl'
+            	controller: controllers.usersController,
+            	controllerAs: 'vm'
             })
             .state('otherwise', {
             	url: '*path',
-            	templateUrl: '/views/404',
-            	controller: 'Error404Ctrl'
+            	templateUrl: '/Backend/components/home/index.html',
+            	controller: controllers.home,
+            	controllerAs: 'vm'
             });
 
 		$urlRouterProvider.otherwise('/');

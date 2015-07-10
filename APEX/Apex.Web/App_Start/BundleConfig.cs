@@ -4,11 +4,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Globalization;
+using System.Web.Optimization;
+
 namespace Apex.Web
 {
-    using System.Web;
-    using System.Web.Optimization;
-
     public class BundleConfig
     {
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
@@ -21,14 +21,18 @@ namespace Apex.Web
             bundles.Add(new ScriptBundle("~/js/app").Include(
                 //"~/scripts/vendor/angular.js",
                 "~/scripts/vendor/angular-ui-router.js",
-                "~/scripts/vendor/angular-translate.js",
-                "~/Backend/translate.js",
                 "~/Backend/shared/filters.js",
                 "~/Backend/shared/services.js",
                 "~/Backend/shared/directives.js",
-                "~/Backend/components/news/controllers.js",
+                "~/Backend/constants/apex.constants.js",
+                "~/Backend/components/news/newsController.js",
+                "~/Backend/components/home/homeController.js",
+                "~/Backend/components/users/usersController.js",
                 "~/Backend/app.js",
                 "~/Backend/app.routes.js"));
+            var culture = CultureInfo.CurrentCulture.Name.ToLower();
+            bundles.Add(new ScriptBundle("~/js/localization").Include(
+                string.Format("~/Scripts/translations/resources_{0}.js", culture)));
         }
     }
 }

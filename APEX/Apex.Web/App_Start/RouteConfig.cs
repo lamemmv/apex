@@ -4,12 +4,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Web.Routing;
+using Apex.Web.Routing;
+
 namespace Apex.Web
 {
-    using System.Web.Routing;
-
-    using Apex.Web.Routing;
-
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
