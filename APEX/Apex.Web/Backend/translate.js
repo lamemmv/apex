@@ -1,8 +1,6 @@
 ﻿(function() {
     'use strict';
-    var apexApp = angular.module('app.translate', []);
-    apexApp.config([
-        '$translateProvider', translateConfig]);
+    angular.module('apex-app', []).config(['$translateProvider', translateConfig]);
 
     function translateConfig($translateProvider) {
         $translateProvider.translations('en', {
@@ -13,7 +11,7 @@
             hello_message: "Hola",
             goodbye_message: "Adios"
         });
-        $translateProvider.useSanitizeValueStrategy('sanitize');
+        $translateProvider.useSanitizeValueStrategy(null);
         $translateProvider.preferredLanguage("en");
     }
-});
+})();

@@ -27,7 +27,8 @@ namespace Apex.Web
                 "~/Backend/shared/services.js",
                 "~/Backend/shared/directives.js",
                 "~/Backend/components/news/controllers.js",
-                "~/Backend/app.js"));
+                "~/Backend/app.js",
+                "~/Backend/app.routes.js"));
         }
     }
 }
