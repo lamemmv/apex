@@ -7,8 +7,9 @@ var resources = {
             Title: 'News'
         },
         Users: {
-            Login: 'Login',
-            Logout: 'Logout'
+            Login: 'Log in',
+            Logout: 'Log out',
+            LoginTitle: 'User login'
         },
         Home: {
             

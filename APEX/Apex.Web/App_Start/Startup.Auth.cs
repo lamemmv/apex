@@ -20,7 +20,18 @@ namespace Apex.Web
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/login")
+                LoginPath = new PathString("/login"),
+                 Provider = new CookieAuthenticationProvider
+                    {
+                        OnApplyRedirect = context =>
+                        {
+                            if (!IsJsonRequest(context.Request))
+                            {
+                                context.Response.Redirect(context.RedirectUri);
+                            }
+                        }
+                    },
+                    CookieSecure = CookieSecureOption.SameAsRequest,
             });
 
             // Use a cookie to temporarily store information about a user logging in with a third party login provider
@@ -40,6 +51,11 @@ namespace Apex.Web
             ////   appSecret: "");
 
             ////app.UseGoogleAuthentication();
+        }
+
+        private static bool IsJsonRequest(IOwinRequest request)
+        {
+            return request.Accept.Contains(HTTPAcceptConstants.ApplicationJson);
         }
     }
 }

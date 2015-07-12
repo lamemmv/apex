@@ -1,12 +1,31 @@
 ﻿(function () {
     'use strict';
 
-    // Google Analytics Collection APIs Reference:
-    // https://developers.google.com/analytics/devguides/collection/analyticsjs/
-
     angular.module(modules.users, [])
-        .controller(controllers.usersController, ['$scope', function ($scope) {
-            $scope.$root.title = 'Apex | Login';
+        .controller(controllers.usersController, ['$scope', '$http', function ($scope, $http) {
+        $scope.translation = resources;
+        var vm = this;
+        vm.login = login;
+        vm.username = '';
+        vm.password = '';
 
-        }]);
+        function login() {
+            var data = {
+                username: vm.username,
+                password : vm.password
+            };
+
+            $http.post("/api/users", JSON.stringify(data),
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                 .success(function (data, status, headers, config) {
+                    console.log('authenticated');
+                 }).error(function (data, status, headers, config) {
+                    console.log('not authenticate');
+                 });
+        }
+    }]);
 })();

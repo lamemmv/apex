@@ -11,7 +11,7 @@
             initialize();
 
             function initialize() {
-                $http.get("/api/news", { params: { 'Id': 1 } }).success(function (data, status, headers, config) {
+                $http.get("/news", { params: { 'Id': 1 } }).success(function (data, status, headers, config) {
                     console.log('successful');
                 }).error(function (data, status, headers, config) {
                     console.log('error');

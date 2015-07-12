@@ -1,7 +1,9 @@
 ﻿var modules = {
     news: 'modules.news',
     users: 'modules.users',
-    home: 'modules.home'
+    home: 'modules.home',
+    config: 'modules.config',
+    authentication: 'app.authentication'
 };
 
 var controllers = {

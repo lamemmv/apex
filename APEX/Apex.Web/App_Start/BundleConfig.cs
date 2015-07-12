@@ -14,7 +14,7 @@ namespace Apex.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css"));
+            bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css", "~/content/vendor.css"));
 
             bundles.Add(new ScriptBundle("~/js/jquery").Include("~/scripts/vendor/jquery-{version}.js"));
 
@@ -29,6 +29,7 @@ namespace Apex.Web
                 "~/Backend/components/home/homeController.js",
                 "~/Backend/components/users/usersController.js",
                 "~/Backend/app.js",
+                "~/Backend/app.config.js",
                 "~/Backend/app.routes.js"));
             var culture = CultureInfo.CurrentCulture.Name.ToLower();
             bundles.Add(new ScriptBundle("~/js/localization").Include(
