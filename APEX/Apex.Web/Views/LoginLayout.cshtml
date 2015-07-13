@@ -3,16 +3,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    @Styles.Render("~/content/css/app")
+    @Styles.Render("~/content/app.css")
+    @Styles.Render("~/content/vendor.css")
+    @Styles.Render("~/content/login.css")
 </head>
 <body class="login-page" ng-app="apex-app">
 <div class="login-page-section">
     @RenderBody()
 </div>
     @Scripts.Render("~/scripts/vendor/angular.js")
+    @Scripts.Render("~/scripts/vendor/angular-ui-router.js")
     @Scripts.Render("~/js/app")
     @Scripts.Render("~/js/localization")
-
 </body>
 </html>
 

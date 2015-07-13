@@ -14,13 +14,32 @@ namespace Apex.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css", "~/content/vendor.css"));
+            bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css", 
+                "~/content/vendor.css",
+                "~/content/flaty.css",
+                "~/content/flaty-responsive.css",
+                "~/content/font-awesome.min.css"));
 
-            bundles.Add(new ScriptBundle("~/js/jquery").Include("~/scripts/vendor/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/js/vendor").Include(
+                "~/scripts/vendor/jquery-2.1.1.min.js",
+                "~/scripts/vendor/jquery.cookie.js",
+                "~/scripts/vendor/jquery.flot.crosshair.js",
+                "~/scripts/vendor/jquery.flot.js",
+                "~/scripts/vendor/jquery.flot.pie.js",
+                "~/scripts/vendor/jquery.flot.resize.js",
+                "~/scripts/vendor/jquery.flot.stack.js",
+                "~/scripts/vendor/jquery.flot.tooltip.min.js",
+                "~/scripts/vendor/jquery.slimscroll.min.js",
+                "~/scripts/vendor/jquery.sparkline.min",
+                "~/scripts/vendor/angular.min.js",
+                "~/scripts/vendor/angular-ui-router.js",
+                "~/scripts/vendor/bootstrap.min.js"));
+
+            bundles.Add(new ScriptBundle("~/js/theme").Include(
+                "~/scripts/flaty.js",
+                "~/scripts/flaty-demo-codes.js"));
 
             bundles.Add(new ScriptBundle("~/js/app").Include(
-                //"~/scripts/vendor/angular.js",
-                "~/scripts/vendor/angular-ui-router.js",
                 "~/Backend/shared/filters.js",
                 "~/Backend/shared/services.js",
                 "~/Backend/shared/directives.js",
