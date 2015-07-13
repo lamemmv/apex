@@ -6,26 +6,14 @@
         $scope.translation = resources;
         var vm = this;
         vm.login = login;
-        vm.username = '';
-        vm.password = '';
+        vm.formdata = { username: '', password: '' };
 
         function login() {
-            var data = {
-                username: vm.username,
-                password : vm.password
-            };
-
-            $http.post("/api/users", JSON.stringify(data),
-                {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                 .success(function (data, status, headers, config) {
-                    console.log('authenticated');
-                 }).error(function (data, status, headers, config) {
-                    console.log('not authenticate');
-                 });
+        	$http.post('/api/user/authenticate', vm.formdata).success(function (data, status, headers, config) {
+        		console.log('authenticated');
+        	}).error(function (data, status, headers, config) {
+        		alert(data.message);
+            });
         }
     }]);
 })();

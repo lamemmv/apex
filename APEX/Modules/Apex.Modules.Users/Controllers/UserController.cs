@@ -9,6 +9,7 @@ using Microsoft.Owin;
 
 namespace Apex.Modules.Users.Controllers
 {
+	[RoutePrefix("api/user")]
 	public class UserController : ApiController
 	{
 		private IOwinContext _owinContext;
@@ -39,6 +40,8 @@ namespace Apex.Modules.Users.Controllers
 		}
 
 		[HttpPost]
+		[AllowAnonymous]
+		[Route("authenticate")]
 		public async Task<IHttpActionResult> Authenticate(UserLoginViewModel model)
 		{
 			if (ModelState.IsValid)

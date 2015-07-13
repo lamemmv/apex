@@ -9,7 +9,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace APEX.Modules.Users
+namespace Apex.Modules.Users
 {
     public class Startup
     {
@@ -28,7 +28,7 @@ namespace APEX.Modules.Users
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-				LoginPath = new PathString("~/"),
+				LoginPath = new PathString("/login"),
                 Provider = new CookieAuthenticationProvider
                 {
                     // Enables the application to validate the security stamp when the user logs in.
