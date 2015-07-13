@@ -17,7 +17,7 @@ namespace Apex.Framework.Data.Context
 
 		public UnitOfWork(DbContext context = null)
 		{
-			_context = context ?? EfDbContext.Create;
+			_context = context ?? EfDbContext.Create();
 			_context.Configuration.ValidateOnSaveEnabled = false;
 
 			_objectContext = ((IObjectContextAdapter)_context).ObjectContext;

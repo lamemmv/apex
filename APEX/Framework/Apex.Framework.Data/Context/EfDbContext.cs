@@ -1,20 +1,19 @@
 ﻿using System.Data.Entity;
+using Apex.Framework.Entities.Models.Users;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Apex.Framework.Data.Context
 {
-	public class EfDbContext : DbContext
+	public class EfDbContext : IdentityDbContext<ApplicationUser>
 	{
 		public EfDbContext()
-			: base("ApexContext")
+			: base("ApexContext", throwIfV1Schema: false)
 		{
 		}
 
-		public static EfDbContext Create
+		public static EfDbContext Create()
 		{
-			get
-			{
-				return new EfDbContext();
-			}
+			return new EfDbContext();
 		}
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
