@@ -50,6 +50,11 @@
   <ItemGroup>
     <Compile Include="Context\EfDbContext.cs" />
     <Compile Include="Context\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201507131416210_Initialize.cs" />
+    <Compile Include="Migrations\201507131416210_Initialize.Designer.cs">
+      <DependentUpon>201507131416210_Initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EfRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
@@ -68,6 +73,11 @@
       <Project>{fc747a84-b9df-418b-8c04-33a0e591ef99}</Project>
       <Name>Apex.Framework.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507131416210_Initialize.resx">
+      <DependentUpon>201507131416210_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
