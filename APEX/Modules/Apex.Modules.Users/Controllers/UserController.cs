@@ -46,6 +46,13 @@ namespace Apex.Modules.Users.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				var applicationUser = await UserManager.FindAsync(model.Username, model.Password);
+				if (applicationUser == null)
+				{
+					UserManager.ResetAccessFailedCount
+					return BadRequest("Invalid login attempt.");	
+				}
+				
 				var loginInResult = await SignInManager.PasswordSignInAsync(model.Username, model.Password, false, shouldLockout: true);
 				switch (loginInResult)
 				{
@@ -53,10 +60,12 @@ namespace Apex.Modules.Users.Controllers
 						return Ok();
 
 					case SignInStatus.LockedOut:
-						return BadRequest("LockedOut");
+						ModelState.AddModelError(string.Empty, "Your account was locked.");
+						break;
 
 					case SignInStatus.RequiresVerification:
-						return BadRequest("RequiresVerification");
+						ModelState.AddModelError(string.Empty, "Your account need to verify.");
+						break;
 
 					case SignInStatus.Failure:
 					default:
@@ -65,7 +74,7 @@ namespace Apex.Modules.Users.Controllers
 				}
 			}
 
-			return Ok(ModelState);
+			return BadRequest(ModelState);
 		}
 
 		public IHttpActionResult Logout()

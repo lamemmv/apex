@@ -1,9 +1,10 @@
 namespace Apex.Framework.Data.Migrations
 {
 	using System;
-	using System.Data.Entity;
 	using System.Data.Entity.Migrations;
 	using System.Linq;
+	using Apex.Framework.Core.Enums;
+	using Apex.Framework.Core.Securities;
 	using Apex.Framework.Data.Context;
 	using Apex.Framework.Entities.Models.Users;
 	using Microsoft.AspNet.Identity;
@@ -33,10 +34,12 @@ namespace Apex.Framework.Data.Migrations
 				Fullname = "Super Administrator",
 				Email = "sa@yahoo.com",
 				EmailConfirmed = true,
-				CreatedOn = currentTime
+				CreatedOn = currentTime,
+				LockoutEnabled = true,
+				PasswordHash = Encryption.ComputeHash(HashProvider.SHA512, "123456", 12)
 			};
 
-			userManager.Create(user, "123456");
+			userManager.Create(user);
 
 			if (roleManager.Roles.Count() == 0)
 			{

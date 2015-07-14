@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.Http;
 using Apex.Framework.Data.Context;
 using Apex.Framework.Entities.Models.Users;
 using Apex.Modules.Users.Services;

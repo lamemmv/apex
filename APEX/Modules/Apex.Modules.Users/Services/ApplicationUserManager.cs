@@ -36,7 +36,7 @@ namespace Apex.Modules.Users.Services
 				RequireNonLetterOrDigit = true,
 				RequireDigit = true,
 				RequireLowercase = false,
-				RequireUppercase = false,
+				RequireUppercase = false
 			};
 
 			manager.PasswordHasher = new SqlPasswordHasher(12, HashProvider.SHA512);
