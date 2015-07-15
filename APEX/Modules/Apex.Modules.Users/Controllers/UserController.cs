@@ -2,6 +2,7 @@
 using System.Web;
 using System.Web.Http;
 using Apex.Modules.Users.Models;
+using Apex.Modules.Users.Resources;
 using Apex.Modules.Users.Services;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -46,30 +47,27 @@ namespace Apex.Modules.Users.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var applicationUser = await UserManager.FindAsync(model.Username, model.Password);
-				if (applicationUser == null)
-				{
-					UserManager.ResetAccessFailedCount
-					return BadRequest("Invalid login attempt.");	
-				}
-				
-				var loginInResult = await SignInManager.PasswordSignInAsync(model.Username, model.Password, false, shouldLockout: true);
+				var loginInResult = await SignInManager.PasswordSignInAsync(
+					model.Username.Trim(), 
+					model.Password, 
+					isPersistent: false, 
+					shouldLockout: true);
 				switch (loginInResult)
 				{
 					case SignInStatus.Success:
 						return Ok();
 
 					case SignInStatus.LockedOut:
-						ModelState.AddModelError(string.Empty, "Your account was locked.");
+						ModelState.AddModelError(string.Empty, UsersLang.LockedOutError);
 						break;
 
 					case SignInStatus.RequiresVerification:
-						ModelState.AddModelError(string.Empty, "Your account need to verify.");
+						ModelState.AddModelError(string.Empty, UsersLang.RequiresVerificationError);
 						break;
 
 					case SignInStatus.Failure:
 					default:
-						ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+						ModelState.AddModelError(string.Empty, UsersLang.FailureError);
 						break;
 				}
 			}

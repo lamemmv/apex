@@ -2,6 +2,7 @@
 using Apex.Framework.Core.Enums;
 using Apex.Framework.Data.Context;
 using Apex.Framework.Entities.Models.Users;
+using Apex.Modules.Users.Configuration;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -35,16 +36,16 @@ namespace Apex.Modules.Users.Services
 				RequiredLength = 6,
 				RequireNonLetterOrDigit = true,
 				RequireDigit = true,
-				RequireLowercase = false,
-				RequireUppercase = false
+				RequireLowercase = true,
+				RequireUppercase = true
 			};
 
-			manager.PasswordHasher = new SqlPasswordHasher(12, HashProvider.SHA512);
+			manager.PasswordHasher = new SqlPasswordHasher(UsersConfiguration.SaltSize, UsersConfiguration.HashProvider);
 
 			// Configure user lockout defaults
-			manager.UserLockoutEnabledByDefault = true;
-			manager.DefaultAccountLockoutTimeSpan = TimeSpan.FromMinutes(5);
-			manager.MaxFailedAccessAttemptsBeforeLockout = 5;
+			manager.UserLockoutEnabledByDefault = UsersConfiguration.UserLockoutEnabledByDefault;
+			manager.DefaultAccountLockoutTimeSpan = TimeSpan.FromHours(UsersConfiguration.DefaultAccountLockoutTimeSpan);
+			manager.MaxFailedAccessAttemptsBeforeLockout = UsersConfiguration.MaxFailedAccessAttemptsBeforeLockout;
 			
 			// Register two factor authentication providers. This application uses Phone and Emails as a step of receiving a code for verifying the user
 			// You can write your own provider and plug in here.
