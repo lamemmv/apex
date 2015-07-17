@@ -133,8 +133,11 @@
   <ItemGroup>
     <Content Include="Backend\components\home\homeController.js" />
     <Content Include="Backend\components\home\index.html" />
+    <Content Include="Backend\components\main\mainController.js" />
     <Content Include="Backend\components\news\index.html" />
     <Content Include="Backend\components\users\index.html" />
+    <Content Include="Backend\components\users\templates\login.html" />
+    <Content Include="Backend\components\users\templates\profile.html" />
     <Content Include="Backend\components\users\usersController.js" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\flaty-responsive.css" />

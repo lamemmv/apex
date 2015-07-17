@@ -47,6 +47,7 @@ namespace Apex.Web
                 "~/Backend/components/news/newsController.js",
                 "~/Backend/components/home/homeController.js",
                 "~/Backend/components/users/usersController.js",
+                "~/Backend/components/main/mainController.js",
                 "~/Backend/app.js",
                 "~/Backend/app.config.js",
                 "~/Backend/app.routes.js"));

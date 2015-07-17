@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     @Styles.Render("~/content/css/app")
 </head>
-<body>
+<body ng-controller="MainController as vm">
     <!-- BEGIN Theme Setting -->
     <div id="theme-setting">
         <a href="http://e-apex.com/#"><i class="fa fa-gears fa-2x"></i></a>
@@ -250,69 +250,13 @@
             </li>
             <!-- END Button Messages -->
             <!-- BEGIN Button User -->
-            <li class="user-profile">
-                <a data-toggle="dropdown" href="http://e-apex.com/#" class="user-menu dropdown-toggle">
-                    <img class="nav-user-photo" src="../Images/avatar1.jpg" alt="Penny&#39;s Photo">
-                    <span class="hhh" id="user_info">
-                        Penny
-                    </span>
-                    <i class="fa fa-caret-down"></i>
-                </a>
-                <!-- BEGIN User Dropdown -->
-                <ul class="dropdown-menu dropdown-navbar" id="user_menu">
-                    <li class="nav-header">
-                        <i class="fa fa-clock-o"></i>
-                        Logined From 20:45
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-cog"></i>
-                            Account Settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-user"></i>
-                            Edit Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-question"></i>
-                            Help
-                        </a>
-                    </li>
-                    <li class="divider visible-xs"></li>
-                    <li class="visible-xs">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-tasks"></i>
-                            Tasks
-                            <span class="badge badge-warning">4</span>
-                        </a>
-                    </li>
-                    <li class="visible-xs">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-bell"></i>
-                            Notifications
-                            <span class="badge badge-important">8</span>
-                        </a>
-                    </li>
-                    <li class="visible-xs">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-envelope"></i>
-                            Messages
-                            <span class="badge badge-success">5</span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-off"></i>
-                            Logout
-                        </a>
-                    </li>
-                </ul>
-                <!-- BEGIN User Dropdown -->
+            <li class="user-profile" ng-switch on="vm.authenticated">
+                <span ng-switch-when="true">
+                    <span ng-include="'/Backend/components/users/templates/profile.html'"></span>
+                </span>
+                <span ng-switch-default>
+                    <span ng-include="'/Backend/components/users/templates/login.html'"></span>
+                </span>
             </li>
             <!-- END Button User -->
         </ul>

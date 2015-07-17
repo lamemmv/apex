@@ -3,11 +3,13 @@
     users: 'modules.users',
     home: 'modules.home',
     config: 'modules.config',
-    authentication: 'app.authentication'
+    authentication: 'app.authentication',
+    main: 'modules.main'
 };
 
 var controllers = {
     home: 'HomeController',
     newsController: 'NewsController',
-    usersController: 'UsersController'
+    usersController: 'UsersController',
+    mainController: 'MainController'
 };
