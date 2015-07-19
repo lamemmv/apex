@@ -11,5 +11,6 @@ var controllers = {
     home: 'HomeController',
     newsController: 'NewsController',
     usersController: 'UsersController',
-    mainController: 'MainController'
+    mainController: 'MainController',
+    loginController: 'LoginController'
 };

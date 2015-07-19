@@ -1,0 +1,31 @@
+﻿<div id="loginDialog">
+    <div class="login">
+        <div class="ribbon-wrapper h2 ribbon-red">
+            <div class="ribbon-front">
+                <h2>User Login</h2>
+            </div>
+            <div class="ribbon-edge-topleft2"></div>
+            <div class="ribbon-edge-bottomleft"></div>
+        </div>
+        <form>
+            <ul>
+                <li>
+                    <span class="glyphicons glyphicons-user pl10 tc-btn"></span>
+                    <input type="text"
+                           placeholder="Username"
+                           ng-model="formdata.username">
+
+                </li>
+                <li>
+                    <span class="glyphicons glyphicons-lock pl10 tc-btn"></span>
+                    <input type="password"
+                           placeholder="Password"
+                           ng-model="formdata.password">
+                </li>
+            </ul>
+        </form>
+        <div class="submit">
+            <input type="submit" ng-click="login($event)" value="{{translation.L.Users.Login}}" />
+        </div>
+    </div>
+</div>

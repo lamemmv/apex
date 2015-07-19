@@ -26,13 +26,6 @@
             	controller: controllers.newsController,
             	controllerAs: 'vm'
             })
-            .state('login', {
-            	url: '/login',
-            	layout: 'basic',
-            	templateUrl: '/views/login',
-            	controller: controllers.usersController,
-            	controllerAs: 'vm'
-            })
             .state('otherwise', {
             	url: '*path',
             	templateUrl: '/Backend/components/home/index.html',

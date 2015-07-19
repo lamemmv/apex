@@ -136,12 +136,14 @@
     <Content Include="Backend\components\main\mainController.js" />
     <Content Include="Backend\components\news\index.html" />
     <Content Include="Backend\components\users\index.html" />
+    <Content Include="Backend\components\users\login.html" />
+    <Content Include="Backend\components\users\loginController.js" />
     <Content Include="Backend\components\users\templates\login.html" />
     <Content Include="Backend\components\users\templates\profile.html" />
     <Content Include="Backend\components\users\usersController.js" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\flaty-responsive.css" />
-    <Content Include="Content\flaty.css" />
+    <Content Include="Content\theme-responsive.css" />
+    <Content Include="Content\theme.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -527,6 +529,7 @@
     <Content Include="Scripts\vendor\jquery.flot.tooltip.min.js" />
     <Content Include="Scripts\vendor\jquery.slimscroll.min.js" />
     <Content Include="Scripts\vendor\jquery.sparkline.min.js" />
+    <Content Include="Scripts\vendor\ui-bootstrap-tpls-0.11.0.min.js" />
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="crossdomain.xml" />
@@ -539,13 +542,11 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Login.cshtml" />
     <Content Include="Views\Index.cshtml" />
     <Content Include="Views\404.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\_PageStart.cshtml" />
     <Content Include="Views\About.cshtml" />
-    <Content Include="Views\LoginLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

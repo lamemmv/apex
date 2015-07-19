@@ -1,15 +1,7 @@
-@media (min-width: 1200px) {
-
-}
-
 @media (min-width: 980px) and (max-width: 1199px) {
     .tile .img > [class*="fa fa-"] {
         font-size: 50px;
     }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-
 }
 
 @media (max-width: 1199px) {
@@ -23,18 +15,7 @@
 }
 
 @media (max-width: 979px) {
-    .mail-msg-header .msg-options {
-        display: block;
-        float: none;
-        margin-top: 10px;
-    }
-    .mail-msg-header .msg-options > i {
-        float: left;
-    }
-    .mail-msg-header .msg-options > br {
-        display: none;
-    }
-
+    
     .navbar-toggle.for-nav-horizontal {
         display: inline-block;
     }

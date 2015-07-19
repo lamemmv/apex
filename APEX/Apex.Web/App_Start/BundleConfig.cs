@@ -16,8 +16,8 @@ namespace Apex.Web
         {
             bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css", 
                 "~/content/vendor.css",
-                "~/content/flaty.css",
-                "~/content/flaty-responsive.css",
+                "~/content/theme.css",
+                "~/content/theme-responsive.css",
                 "~/content/font-awesome.min.css"));
 
             bundles.Add(new ScriptBundle("~/js/vendor").Include(
@@ -33,7 +33,9 @@ namespace Apex.Web
                 "~/scripts/vendor/jquery.sparkline.min",
                 "~/scripts/vendor/angular.min.js",
                 "~/scripts/vendor/angular-ui-router.js",
-                "~/scripts/vendor/bootstrap.min.js"));
+                "~/scripts/vendor/bootstrap.min.js",
+                //"~/scripts/vendor/ngDialog.min.js",
+                "~/scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/js/theme").Include(
                 "~/scripts/flaty.js",
@@ -47,6 +49,7 @@ namespace Apex.Web
                 "~/Backend/components/news/newsController.js",
                 "~/Backend/components/home/homeController.js",
                 "~/Backend/components/users/usersController.js",
+                "~/Backend/components/users/loginController.js",
                 "~/Backend/components/main/mainController.js",
                 "~/Backend/app.js",
                 "~/Backend/app.config.js",
