@@ -141,6 +141,11 @@
     <Content Include="Backend\components\users\templates\login.html" />
     <Content Include="Backend\components\users\templates\profile.html" />
     <Content Include="Backend\components\users\usersController.js" />
+    <Content Include="Backend\shared\notifications\messages.html" />
+    <Content Include="Backend\shared\notifications\notifications.html" />
+    <Content Include="Backend\shared\notifications\tasks.html" />
+    <Content Include="Backend\shared\sidebar\sidebar.html" />
+    <Content Include="Backend\shared\themeSetting\themeSetting.html" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\theme-responsive.css" />
     <Content Include="Content\theme.css" />
@@ -153,7 +158,6 @@
       <DependentUpon>app.less</DependentUpon>
     </Content>
     <Content Include="Content\app.less" />
-    <Content Include="Content\login.css" />
     <Content Include="Content\variables.less" />
     <Content Include="Content\vendor.css" />
     <Content Include="Global.asax" />

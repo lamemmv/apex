@@ -19,7 +19,10 @@
                 });
 
                 modalInstance.result.then(function (data) {
-                    vm.authenticated = data;
+                    //vm.authenticated = data;
+                    vm.authenticated = true; // For testing
+                    // when authenticate = true, it should go to certain page that for logedin users ONLY.
+                    // ANd might enabled/disable menus that avaible for user logedin ONLY.
                 });
             }
     }]);

@@ -34,7 +34,6 @@ namespace Apex.Web
                 "~/scripts/vendor/angular.min.js",
                 "~/scripts/vendor/angular-ui-router.js",
                 "~/scripts/vendor/bootstrap.min.js",
-                //"~/scripts/vendor/ngDialog.min.js",
                 "~/scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/js/theme").Include(

@@ -10,57 +10,7 @@
 </head>
 <body ng-controller="MainController as vm">
     <!-- BEGIN Theme Setting -->
-    <div id="theme-setting">
-        <a href="http://e-apex.com/#"><i class="fa fa-gears fa-2x"></i></a>
-        <ul style="display: none;">
-            <li>
-                <span>Skin</span>
-                <ul class="colors" data-target="body" data-prefix="skin-">
-                    <li class="active"><a class="blue" href="http://e-apex.com/#"></a></li>
-                    <li><a class="red" href="http://e-apex.com/#"></a></li>
-                    <li><a class="green" href="http://e-apex.com/#"></a></li>
-                    <li><a class="orange" href="http://e-apex.com/#"></a></li>
-                    <li><a class="yellow" href="http://e-apex.com/#"></a></li>
-                    <li><a class="pink" href="http://e-apex.com/#"></a></li>
-                    <li><a class="magenta" href="http://e-apex.com/#"></a></li>
-                    <li><a class="gray" href="http://e-apex.com/#"></a></li>
-                    <li><a class="black" href="http://e-apex.com/#"></a></li>
-                </ul>
-            </li>
-            <li>
-                <span>Navbar</span>
-                <ul class="colors" data-target="#navbar" data-prefix="navbar-">
-                    <li class="active"><a class="blue" href="http://e-apex.com/#"></a></li>
-                    <li><a class="red" href="http://e-apex.com/#"></a></li>
-                    <li><a class="green" href="http://e-apex.com/#"></a></li>
-                    <li><a class="orange" href="http://e-apex.com/#"></a></li>
-                    <li><a class="yellow" href="http://e-apex.com/#"></a></li>
-                    <li><a class="pink" href="http://e-apex.com/#"></a></li>
-                    <li><a class="magenta" href="http://e-apex.com/#"></a></li>
-                    <li><a class="gray" href="http://e-apex.com/#"></a></li>
-                    <li><a class="black" href="http://e-apex.com/#"></a></li>
-                </ul>
-            </li>
-            <li>
-                <span>Sidebar</span>
-                <ul class="colors" data-target="#main-container" data-prefix="sidebar-">
-                    <li class="active"><a class="blue" href="http://e-apex.com/#"></a></li>
-                    <li><a class="red" href="http://e-apex.com/#"></a></li>
-                    <li><a class="green" href="http://e-apex.com/#"></a></li>
-                    <li><a class="orange" href="http://e-apex.com/#"></a></li>
-                    <li><a class="yellow" href="http://e-apex.com/#"></a></li>
-                    <li><a class="pink" href="http://e-apex.com/#"></a></li>
-                    <li><a class="magenta" href="http://e-apex.com/#"></a></li>
-                    <li><a class="gray" href="http://e-apex.com/#"></a></li>
-                    <li><a class="black" href="http://e-apex.com/#"></a></li>
-                </ul>
-            </li>
-            <li>
-                <span></span>
-                <a data-target="navbar" href="http://e-apex.com/#"><i class="fa fa-square-o"></i> Fixed Navbar</a>
-                <a class="hidden-inline-xs" data-target="sidebar" href="http://e-apex.com/#"><i class="fa fa-square-o"></i> Fixed Sidebar</a>
-            </li>
-        </ul>
+    <div id="theme-setting" ng-include="'/Backend/shared/themeSetting/themeSetting.html'">
     </div>
     <!-- END Theme Setting -->
     <!-- BEGIN Navbar -->
@@ -68,7 +18,7 @@
         <button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
             <span class="fa fa-bars"></span>
         </button>
-        <a class="navbar-brand" href="http://e-apex.com/#">
+        <a class="navbar-brand" href="#">
             <small>
                 <i class="fa fa-desktop"></i>
                 APEX Admin
@@ -77,176 +27,15 @@
         <!-- BEGIN Navbar Buttons -->
         <ul class="nav flaty-nav pull-right">
             <!-- BEGIN Button Tasks -->
-            <li class="hidden-xs">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="http://e-apex.com/#">
-                    <i class="fa fa-tasks"></i>
-                    <span class="badge badge-warning">4</span>
-                </a>
-                <!-- BEGIN Tasks Dropdown -->
-                <ul class="dropdown-navbar dropdown-menu">
-                    <li class="nav-header">
-                        <i class="fa fa-check"></i>
-                        4 Tasks to complete
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <div class="clearfix">
-                                <span class="pull-left">Software Update</span>
-                                <span class="pull-right">75%</span>
-                            </div>
-                            <div class="progress progress-mini">
-                                <div style="width:75%" class="progress-bar progress-bar-warning"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <div class="clearfix">
-                                <span class="pull-left">Transfer To New Server</span>
-                                <span class="pull-right">45%</span>
-                            </div>
-                            <div class="progress progress-mini">
-                                <div style="width:45%" class="progress-bar progress-bar-danger"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <div class="clearfix">
-                                <span class="pull-left">Bug Fixes</span>
-                                <span class="pull-right">20%</span>
-                            </div>
-                            <div class="progress progress-mini">
-                                <div style="width:20%" class="progress-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://e-apex.com/#">
-                            <div class="clearfix">
-                                <span class="pull-left">Writing Documentation</span>
-                                <span class="pull-right">85%</span>
-                            </div>
-                            <div class="progress progress-mini progress-striped active">
-                                <div style="width:85%" class="progress-bar progress-bar-success"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="more">
-                        <a href="http://e-apex.com/#">See tasks with details</a>
-                    </li>
-                </ul>
-                <!-- END Tasks Dropdown -->
+            <li class="hidden-xs" ng-include="'/Backend/shared/notifications/tasks.html'">
             </li>
             <!-- END Button Tasks -->
             <!-- BEGIN Button Notifications -->
-            <li class="hidden-xs">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="http://e-apex.com/#">
-                    <i class="fa fa-bell anim-swing"></i>
-                    <span class="badge badge-important">5</span>
-                </a>
-                <!-- BEGIN Notifications Dropdown -->
-                <ul class="dropdown-navbar dropdown-menu">
-                    <li class="nav-header">
-                        <i class="fa fa-warning"></i>
-                        5 Notifications
-                    </li>
-                    <li class="notify">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-comment orange"></i>
-                            <p>New Comments</p>
-                            <span class="badge badge-warning">4</span>
-                        </a>
-                    </li>
-                    <li class="notify">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-twitter blue"></i>
-                            <p>New Twitter followers</p>
-                            <span class="badge badge-info">7</span>
-                        </a>
-                    </li>
-                    <li class="notify">
-                        <a href="http://e-apex.com/#">
-                            <img src="../Images/avatar2.jpg" alt="Alex">
-                            <p>David would like to become moderator.</p>
-                        </a>
-                    </li>
-                    <li class="notify">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-bug pink"></i>
-                            <p>New bug in program!</p>
-                        </a>
-                    </li>
-                    <li class="notify">
-                        <a href="http://e-apex.com/#">
-                            <i class="fa fa-shopping-cart green"></i>
-                            <p>You have some new orders</p>
-                            <span class="badge badge-success">+10</span>
-                        </a>
-                    </li>
-                    <li class="more">
-                        <a href="http://e-apex.com/#">See all notifications</a>
-                    </li>
-                </ul>
-                <!-- END Notifications Dropdown -->
+            <li class="hidden-xs" ng-include="'/Backend/shared/notifications/notifications.html'">
             </li>
             <!-- END Button Notifications -->
             <!-- BEGIN Button Messages -->
-            <li class="hidden-xs">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="http://e-apex.com/#">
-                    <i class="fa fa-envelope anim-top-down"></i>
-                    <span class="badge badge-success">3</span>
-                </a>
-                <!-- BEGIN Messages Dropdown -->
-                <ul class="dropdown-navbar dropdown-menu">
-                    <li class="nav-header">
-                        <i class="fa fa-comments"></i>
-                        3 Messages
-                    </li>
-                    <li class="msg">
-                        <a href="http://e-apex.com/#">
-                            <img src="../Images/avatar3.jpg" alt="Sarah&#39;s Avatar">
-                            <div>
-                                <span class="msg-title">Sarah</span>
-                                <span class="msg-time">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span>a moment ago</span>
-                                </span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </a>
-                    </li>
-                    <li class="msg">
-                        <a href="http://e-apex.com/#">
-                            <img src="../Images/avatar4.jpg" alt="Emma&#39;s Avatar">
-                            <div>
-                                <span class="msg-title">Emma</span>
-                                <span class="msg-time">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span>2 Days ago</span>
-                                </span>
-                            </div>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ...</p>
-                        </a>
-                    </li>
-                    <li class="msg">
-                        <a href="http://e-apex.com/#">
-                            <img src="../Images/avatar5.jpg" alt="John&#39;s Avatar">
-                            <div>
-                                <span class="msg-title">John</span>
-                                <span class="msg-time">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span>8:24 PM</span>
-                                </span>
-                            </div>
-                            <p>Duis aute irure dolor in reprehenderit in ...</p>
-                        </a>
-                    </li>
-                    <li class="more">
-                        <a href="http://e-apex.com/#">See all messages</a>
-                    </li>
-                </ul>
-                <!-- END Notifications Dropdown -->
+            <li class="hidden-xs" ng-include="'/Backend/shared/notifications/messages.html'">
             </li>
             <!-- END Button Messages -->
             <!-- BEGIN Button User -->
@@ -266,173 +55,8 @@
     <!-- BEGIN Container -->
     <div class="container" id="main-container">
         <!-- BEGIN Sidebar -->
-        <div id="sidebar" class="navbar-collapse collapse">
-            <!-- BEGIN Navlist -->
-            <ul class="nav nav-list" style="height: auto;">
-                <!-- BEGIN Search Form -->
-                <li>
-                    <form target="#" method="GET" class="search-form">
-                        <span class="search-pan">
-                            <button type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            <input type="text" name="search" placeholder="Search ..." autocomplete="off">
-                        </span>
-                    </form>
-                </li>
-                <!-- END Search Form -->
-                <li class="active">
-                    <a href="http://e-apex.com/index.html">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/typography.html">
-                        <i class="fa fa-text-width"></i>
-                        <span>Typography</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/ui_general.html">General</a></li>
-                        <li><a href="http://e-apex.com/ui_button.html">Button</a></li>
-                        <li><a href="http://e-apex.com/ui_tabs.html">Tab &amp; Accordion</a></li>
-                        <li><a href="http://e-apex.com/ui_slider.html">Slider</a></li>
-                        <li><a href="http://e-apex.com/ui_tile.html">Tile</a></li>
-                        <li><a href="http://e-apex.com/ui_timeline.html">Timeline</a></li>
-                        <li><a href="http://e-apex.com/ui_chart.html">Chart</a></li>
-                        <li><a href="http://e-apex.com/ui_message.html">Conversation</a></li>
-                        <li><a href="http://e-apex.com/ui_horizontal-menu.html">Horizontal Menu</a></li>
-                        <li><a href="http://e-apex.com/ui_icon.html">Icon</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-edit"></i>
-                        <span>Forms</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/form_layout.html">Layout</a></li>
-                        <li><a href="http://e-apex.com/form_component.html">Component</a></li>
-                        <li><a href="http://e-apex.com/form_wizard.html">Wizard</a></li>
-                        <li><a href="http://e-apex.com/form_validation.html">Validation</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-list"></i>
-                        <span>Tables</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/table_basic.html">Basic</a></li>
-                        <li><a href="http://e-apex.com/table_advance.html">Advance</a></li>
-                        <li><a href="http://e-apex.com/table_dynamic.html">Dynamic</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-globe"></i>
-                        <span>Maps</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/map_google.html">Google Maps</a></li>
-                        <li><a href="http://e-apex.com/map_vector.html">Vector Maps</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-                <li>
-                    <a href="http://e-apex.com/box.html">
-                        <i class="fa fa-list-alt"></i>
-                        <span>Box</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/calendar.html">
-                        <i class="fa fa-calendar"></i>
-                        <span>Calendar</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/gallery.html">
-                        <i class="fa fa-picture-o"></i>
-                        <span>Gallery</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/grid.html">
-                        <i class="fa fa-th"></i>
-                        <span>Griding System</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-file-text-o"></i>
-                        <span>Sample Pages</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/extra_login.html">Login &amp; Register</a></li>
-                        <li>
-                            <span>Email</span>
-                            <ul>
-                                <li><a href="http://e-apex.com/extra_mail-list.html">Inbox</a></li>
-                                <li><a href="http://e-apex.com/extra_mail-msg.html">Mail Thread</a></li>
-                                <li><a href="http://e-apex.com/extra_mail-compose.html">Compose</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://e-apex.com/extra_profile.html">User Profile</a></li>
-                        <li><a href="http://e-apex.com/extra_invoice.html">Invoice</a></li>
-                        <li><a href="http://e-apex.com/extra_search.html">Search Results</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-                <li>
-                    <a href="http://e-apex.com/#" class="dropdown-toggle">
-                        <i class="fa fa-file"></i>
-                        <span>Other Pages</span>
-                        <b class="arrow fa fa-angle-right"></b>
-                    </a>
-                    <!-- BEGIN Submenu -->
-                    <ul class="submenu">
-                        <li><a href="http://e-apex.com/more_blank.html">Blank Page</a></li>
-                        <li><a href="http://e-apex.com/more_full-width.html">Full Width Page</a></li>
-                        <li>
-                            <span>Errors</span>
-                            <ul>
-                                <li><a href="http://e-apex.com/more_error-404.html">Error 404</a></li>
-                                <li><a href="http://e-apex.com/more_error-500.html">Error 500</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://e-apex.com/more_set-skin.html">Skin</a></li>
-                        <li><a href="http://e-apex.com/more_set-sidebar-navbar-color.html">Sidebar &amp; Navbar</a></li>
-                        <li><a href="http://e-apex.com/more_sidebar-collapsed.html">Collapsed Sidebar</a></li>
-                    </ul>
-                    <!-- END Submenu -->
-                </li>
-            </ul>
-            <!-- END Navlist -->
-            <!-- BEGIN Sidebar Collapse Button -->
-            <div id="sidebar-collapse" class="visible-lg">
-                <i class="fa fa-angle-double-left"></i>
-            </div>
-            <!-- END Sidebar Collapse Button -->
+        <div id="sidebar" class="navbar-collapse collapse" ng-include="'/Backend/shared/sidebar/sidebar.html'">
+
         </div>
         <!-- END Sidebar -->
         <!-- BEGIN Content -->
@@ -462,7 +86,7 @@
             <footer>
                 <p>2015 © Apex solution.</p>
             </footer>
-            <a id="btn-scrollup" class="btn btn-circle btn-lg" href="http://e-apex.com/#" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+            <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#" style="display: none;"><i class="fa fa-chevron-up"></i></a>
         </div>
         <!-- END Content -->
     </div>

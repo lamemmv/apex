@@ -11,6 +11,8 @@
             function login($event) {
 
                 $http.post('/api/user/authenticate', $scope.formdata).success(function (data, status, headers, config) {
+                    // TODO: should get user information and return for mainController. 
+                    // mainController will store user information in the local storage.
                     $modalInstance.close(true);
                 }).error(function (data, status, headers, config) {
                     $modalInstance.close(false);
