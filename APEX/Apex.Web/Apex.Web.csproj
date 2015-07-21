@@ -186,7 +186,7 @@
     <Content Include="Images\avatar4.jpg" />
     <Content Include="Images\avatar5.jpg" />
     <Content Include="Scripts\flaty-demo-codes.js" />
-    <Content Include="Scripts\flaty.js" />
+    <Content Include="Scripts\theme.js" />
     <Content Include="Scripts\translations\resources_en-us.js" />
     <Content Include="Scripts\translations\resources_vi-vn.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />

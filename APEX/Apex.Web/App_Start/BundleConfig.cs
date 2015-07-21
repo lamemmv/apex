@@ -23,7 +23,7 @@ namespace Apex.Web
             bundles.Add(new ScriptBundle("~/js/vendor").Include(
                 "~/scripts/vendor/jquery-2.1.1.min.js",
                 "~/scripts/vendor/jquery.cookie.js",
-                "~/scripts/vendor/jquery.flot.crosshair.js",
+                //"~/scripts/vendor/jquery.flot.crosshair.js",
                 "~/scripts/vendor/jquery.flot.js",
                 "~/scripts/vendor/jquery.flot.pie.js",
                 "~/scripts/vendor/jquery.flot.resize.js",
@@ -37,7 +37,7 @@ namespace Apex.Web
                 "~/scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/js/theme").Include(
-                "~/scripts/flaty.js",
+                "~/scripts/theme.js",
                 "~/scripts/flaty-demo-codes.js"));
 
             bundles.Add(new ScriptBundle("~/js/app").Include(

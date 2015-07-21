@@ -167,7 +167,7 @@ $(function() {
 
     //Collapse button
     $('#sidebar.sidebar-collapsed #sidebar-collapse > i').attr('class', 'fa fa-angle-double-right');
-    $('#sidebar-collapse').click(function(){
+    $('#sidebar-collapse').click(function(e){
         $('#sidebar').toggleClass('sidebar-collapsed');
         if ($('#sidebar').hasClass('sidebar-collapsed')) {
             $('#sidebar-collapse > i').attr('class', 'fa fa-angle-double-right');
