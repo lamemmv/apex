@@ -37,8 +37,8 @@ namespace Apex.Web
                 "~/scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/js/theme").Include(
-                "~/scripts/theme.js",
-                "~/scripts/flaty-demo-codes.js"));
+                "~/scripts/theme.js"/*,
+                "~/scripts/flaty-demo-codes.js"*/));
 
             bundles.Add(new ScriptBundle("~/js/app").Include(
                 "~/Backend/shared/filters.js",
