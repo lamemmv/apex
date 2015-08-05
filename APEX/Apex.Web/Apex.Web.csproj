@@ -131,8 +131,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backend\components\dashboard\dashboardController.js" />
+    <Content Include="Backend\components\dashboard\functions.js" />
+    <Content Include="Backend\components\dashboard\index.html" />
     <Content Include="Backend\components\home\homeController.js" />
     <Content Include="Backend\components\home\index.html" />
+    <Content Include="Backend\components\main\header.html" />
     <Content Include="Backend\components\main\mainController.js" />
     <Content Include="Backend\components\news\index.html" />
     <Content Include="Backend\components\users\index.html" />
@@ -146,12 +150,13 @@
     <Content Include="Backend\shared\notifications\tasks.html" />
     <Content Include="Backend\shared\sidebar\sidebar.html" />
     <Content Include="Backend\shared\themeSetting\themeSetting.html" />
+    <Content Include="Content\framework\app.min.1.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\theme-responsive.css" />
-    <Content Include="Content\theme.css" />
+    <Content Include="Content\framework\material-design-iconic-font.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\home.css" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\app.css">
@@ -177,7 +182,16 @@
     <Content Include="Backend\shared\services.spec.js">
       <DependentUpon>services.js</DependentUpon>
     </Content>
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\32.png" />
+    <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\535.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\alpha.jpg" />
     <Content Include="Images\apex-logo.jpg" />
     <Content Include="Images\apex-logo.png" />
     <Content Include="Images\avatar1.jpg" />
@@ -185,8 +199,17 @@
     <Content Include="Images\avatar3.jpg" />
     <Content Include="Images\avatar4.jpg" />
     <Content Include="Images\avatar5.jpg" />
-    <Content Include="Scripts\flaty-demo-codes.js" />
-    <Content Include="Scripts\theme.js" />
+    <Content Include="Images\ellipsis.png" />
+    <Content Include="Images\mate7.jpg" />
+    <Content Include="Images\menu-2.png" />
+    <Content Include="Images\message.png" />
+    <Content Include="Images\note4.jpg" />
+    <Content Include="Images\notification.png" />
+    <Content Include="Images\notifications.png" />
+    <Content Include="Images\profile-menu.png" />
+    <Content Include="Images\search-2.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\task.png" />
     <Content Include="Scripts\translations\resources_en-us.js" />
     <Content Include="Scripts\translations\resources_vi-vn.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />
@@ -521,6 +544,11 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\fonts\Roboto-Light-webfont.woff" />
+    <Content Include="Content\fonts\Roboto-Medium-webfont.woff" />
+    <Content Include="Content\fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="Backend\shared\sidebar\dashboard.sidebar.html" />
     <None Include="Scripts\_references.js" />
     <Content Include="Backend\app.js" />
     <Content Include="Scripts\vendor\jquery-2.1.1.min.js" />
@@ -644,6 +672,31 @@
     <Content Include="Themes\Travel\js\move-top.js" />
     <Content Include="Themes\Travel\js\owl.carousel.js" />
     <Content Include="Themes\Travel\w3layouts-License.txt" />
+    <Content Include="Themes\Volton\css\bootstrap.min.css" />
+    <Content Include="Themes\Volton\css\font-awesome.css" />
+    <Content Include="Themes\Volton\css\normalize.css" />
+    <Content Include="Themes\Volton\css\owl-carousel.css" />
+    <Content Include="Themes\Volton\css\templatemo-style.css" />
+    <Content Include="Themes\Volton\fonts\fontawesome-webfont.svg" />
+    <Content Include="Themes\Volton\fonts\Roboto-Bold-webfont.svg" />
+    <Content Include="Themes\Volton\fonts\Roboto-Light-webfont.svg" />
+    <Content Include="Themes\Volton\fonts\Roboto-Regular-webfont.svg" />
+    <Content Include="Themes\Volton\img\1.jpg" />
+    <Content Include="Themes\Volton\img\2.jpg" />
+    <Content Include="Themes\Volton\img\3.jpg" />
+    <Content Include="Themes\Volton\img\4.jpg" />
+    <Content Include="Themes\Volton\img\5.jpg" />
+    <Content Include="Themes\Volton\img\6.jpg" />
+    <Content Include="Themes\Volton\img\7.jpg" />
+    <Content Include="Themes\Volton\img\8.jpg" />
+    <Content Include="Themes\Volton\img\profile.jpg" />
+    <Content Include="Themes\Volton\index.html" />
+    <Content Include="Themes\Volton\js\main.js" />
+    <Content Include="Themes\Volton\js\min\main.min.js" />
+    <Content Include="Themes\Volton\js\min\plugins.min.js" />
+    <Content Include="Themes\Volton\js\plugins.js" />
+    <Content Include="Themes\Volton\js\vendor\jquery-1.10.2.min.js" />
+    <Content Include="Themes\Volton\js\vendor\modernizr-2.6.2.min.js" />
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="crossdomain.xml" />
@@ -673,6 +726,29 @@
     <Content Include="Themes\Shop\assets\sass\libs\_skel.scss" />
     <Content Include="Themes\Shop\assets\sass\libs\_vars.scss" />
     <Content Include="Themes\Shop\assets\sass\main.scss" />
+    <Content Include="Themes\Volton\fonts\fontawesome-webfont.eot" />
+    <Content Include="Themes\Volton\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Themes\Volton\fonts\fontawesome-webfont.woff" />
+    <Content Include="Themes\Volton\fonts\FontAwesome.otf" />
+    <Content Include="Themes\Volton\fonts\Roboto-Bold-webfont.eot" />
+    <Content Include="Themes\Volton\fonts\Roboto-Bold-webfont.ttf" />
+    <Content Include="Themes\Volton\fonts\Roboto-Bold-webfont.woff" />
+    <Content Include="Themes\Volton\fonts\Roboto-Light-webfont.eot" />
+    <Content Include="Themes\Volton\fonts\Roboto-Light-webfont.ttf" />
+    <Content Include="Themes\Volton\fonts\Roboto-Light-webfont.woff" />
+    <Content Include="Themes\Volton\fonts\Roboto-Regular-webfont.eot" />
+    <Content Include="Themes\Volton\fonts\Roboto-Regular-webfont.ttf" />
+    <Content Include="Themes\Volton\fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="Themes\Volton\sass\main.scss" />
+    <Content Include="Themes\Volton\sass\_about.scss" />
+    <Content Include="Themes\Volton\sass\_banner.scss" />
+    <Content Include="Themes\Volton\sass\_base.scss" />
+    <Content Include="Themes\Volton\sass\_contact.scss" />
+    <Content Include="Themes\Volton\sass\_footer.scss" />
+    <Content Include="Themes\Volton\sass\_header.scss" />
+    <Content Include="Themes\Volton\sass\_projects.scss" />
+    <Content Include="Themes\Volton\sass\_reset.scss" />
+    <Content Include="Themes\Volton\sass\_vars.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

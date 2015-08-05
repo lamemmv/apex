@@ -12,5 +12,11 @@ var controllers = {
     newsController: 'NewsController',
     usersController: 'UsersController',
     mainController: 'MainController',
-    loginController: 'LoginController'
+    loginController: 'LoginController',
+    dashboardController: 'DashboardController'
+};
+
+var states = {
+    dashboard: 'dashboard'
+
 };

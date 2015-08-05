@@ -26,6 +26,12 @@
             	controller: controllers.newsController,
             	controllerAs: 'vm'
             })
+            .state(states.dashboard, {
+                url: '/dashboard',
+                templateUrl: '/Backend/components/dashboard/index.html',
+                controller: controllers.dashboardController,
+                controllerAs: 'vm'
+            })
             .state('otherwise', {
             	url: '*path',
             	templateUrl: '/Backend/components/home/index.html',

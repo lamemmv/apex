@@ -14,11 +14,15 @@ namespace Apex.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css", 
+            bundles.Add(new StyleBundle("~/content/css/app").Include(
+                //"~/content/app.css", 
                 "~/content/vendor.css",
-                "~/content/theme.css",
-                "~/content/theme-responsive.css",
-                "~/content/font-awesome.min.css"));
+                //"~/content/theme.css",
+                //"~/content/theme-responsive.css",
+                //"~/content/font-awesome.min.css",
+                "~/content/home.css",
+                "~/content/framework/app.min.1.css",
+                "~/content/framework/material-design-iconic-font.min.css"));
 
             bundles.Add(new ScriptBundle("~/js/vendor").Include(
                 "~/scripts/vendor/jquery-2.1.1.min.js",
@@ -37,7 +41,7 @@ namespace Apex.Web
                 "~/scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/js/theme").Include(
-                "~/scripts/theme.js"/*,
+                /*"~/scripts/theme.js",
                 "~/scripts/flaty-demo-codes.js"*/));
 
             bundles.Add(new ScriptBundle("~/js/app").Include(
@@ -50,6 +54,8 @@ namespace Apex.Web
                 "~/Backend/components/users/usersController.js",
                 "~/Backend/components/users/loginController.js",
                 "~/Backend/components/main/mainController.js",
+                "~/Backend/components/dashboard/dashboardController.js",
+                "~/Backend/components/dashboard/functions.js",
                 "~/Backend/app.js",
                 "~/Backend/app.config.js",
                 "~/Backend/app.routes.js"));

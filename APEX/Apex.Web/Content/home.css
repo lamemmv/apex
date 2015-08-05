@@ -1,0 +1,168 @@
+﻿/*common use*/
+.tc-w {
+    color: white !important;
+}
+
+.fs10 {
+    font-size: 10px !important;
+}
+
+.fs12 {
+    font-size: 12px !important;
+}
+
+.fs14 {
+    font-size: 14px !important;
+}
+
+.fs16 {
+    font-size: 16px !important;
+}
+
+.fs18 {
+    font-size: 18px !important;
+}
+
+.fs20 {
+    font-size: 20px !important;
+}
+
+.fs22 {
+    font-size: 22px !important;
+}
+
+.fs24 {
+    font-size: 24px !important;
+}
+
+.fs26 {
+    font-size: 26px !important;
+}
+
+.fs28 {
+    font-size: 28px !important;
+}
+
+.fs30 {
+    font-size: 30px !important;
+}
+
+.fs32 {
+    font-size: 32px !important;
+}
+
+.fs34 {
+    font-size: 34px !important;
+}
+
+.fs36 {
+    font-size: 36px !important;
+}
+
+.pl10 {
+    padding-left: 10px !important;
+}
+
+.pl15 {
+    padding-left: 15px !important;
+}
+
+.pl20 {
+    padding-left: 20px !important;
+}
+
+.pl25 {
+    padding-left: 25px !important;
+}
+
+/*end common use*/
+.login-section {
+    color: white;
+    padding-right: 10px;
+}
+
+/*--------------------------------LOGIN DIALOG--------------------------------*/
+#loginDialog input[type="text"], #loginDialog input[type="password"] {
+   padding: 1em 0em 1em 1em; 
+   color: #858282; 
+   font-size: 15px; 
+   outline: none; 
+   background: none; 
+   font-weight: 500; 
+   border: none; 
+}
+
+#loginDialog form li {
+    list-style: none;
+    width: 87%;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 20px;
+    outline: none;
+}
+
+.h2.ribbon-wrapper {
+    position: relative;
+}
+
+.h2 .ribbon-front {
+    background-color: #ffa300;
+    height: 43px;
+    width: 255px;
+    position: relative;
+    left: -10px;
+    z-index: 2;
+}
+
+#loginDialog .h2 h2 {
+    color: #fff;
+    font-size: 22px;
+    padding: 9px 9px 5px 40px;
+    font-weight: 300;
+}
+
+.ribbon-edge-topleft2 {
+    top: 0;
+    border-width: 22px 20px 21px 37px;
+    transform: rotate(-180deg);
+    border-radius: 1px;
+    left: 245px;
+    border-color: transparent #ffa300 transparent transparent;
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+}
+
+#loginDialog .h2 .ribbon-edge-bottomleft {
+    border-width: 0 10px 15px 0;
+    left: -10px;
+    border-color: transparent #e17e02 transparent transparent;
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+}
+
+.login {
+    margin: 30px 0 30px 0;
+}
+
+#loginDialog .submit input[type="submit"] {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    width: 87%;
+    border: none;
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    background: #00bffe;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: 43px;
+}
+/*--------------------------------END--------------------------------*/
