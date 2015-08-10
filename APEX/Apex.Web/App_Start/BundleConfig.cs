@@ -19,7 +19,7 @@ namespace Apex.Web
                 "~/content/vendor.css",
                 //"~/content/theme.css",
                 //"~/content/theme-responsive.css",
-                //"~/content/font-awesome.min.css",
+                "~/content/font-awesome.min.css",
                 "~/content/home.css",
                 "~/content/framework/app.min.1.css",
                 "~/content/framework/material-design-iconic-font.min.css"));
@@ -56,6 +56,7 @@ namespace Apex.Web
                 "~/Backend/components/main/mainController.js",
                 "~/Backend/components/dashboard/dashboardController.js",
                 "~/Backend/components/dashboard/functions.js",
+                "~/Backend/components/dashboard/jquery.nicescroll.min.js",
                 "~/Backend/app.js",
                 "~/Backend/app.config.js",
                 "~/Backend/app.routes.js"));

@@ -134,6 +134,7 @@
     <Content Include="Backend\components\dashboard\dashboardController.js" />
     <Content Include="Backend\components\dashboard\functions.js" />
     <Content Include="Backend\components\dashboard\index.html" />
+    <Content Include="Backend\components\dashboard\jquery.nicescroll.min.js" />
     <Content Include="Backend\components\home\homeController.js" />
     <Content Include="Backend\components\home\index.html" />
     <Content Include="Backend\components\main\header.html" />
@@ -709,7 +710,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Index.cshtml" />
     <Content Include="Views\404.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\_PageStart.cshtml" />
